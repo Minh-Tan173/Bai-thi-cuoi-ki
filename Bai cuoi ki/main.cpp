@@ -21,6 +21,7 @@ void Login(int &choice) {
 }
 int main() {
 	int choice;
+	int i=0;
 	string check;
 	string acc_N = "none";
 	string nameAcc = "admin";
@@ -32,10 +33,14 @@ int main() {
 		case 1:
 		{
 			do {
-				system("cls");
+				if (i >= 1) {
+					cout << "Enter again" << endl << endl;
+				}
 				cin.ignore();
 				cout << "Username: ";  cin >> acc_N;
 				cout << "Password: "; cin >> acc_P;
+				i++;
+				system("cls");
 			} while (((acc_N.compare(nameAcc) != 0) && (acc_P != 12345)));
 			menu_admin();
 			break;
