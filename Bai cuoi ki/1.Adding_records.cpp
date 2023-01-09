@@ -8,6 +8,7 @@ void AddRecord()
 	int numberS;
 	fstream myFile;
 	cout << "So luong hoc sinh muon them vao: "; cin >> numberS;
+	cout <<"__________________________"<<"\n\n\n";
 	Infor_Student *Student = new Infor_Student[numberS];
 	myFile.open("infor.txt", ios::app);
 	if (myFile.is_open()){
